@@ -1,0 +1,121 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/baseLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#353535"
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="120dp"
+            android:background="@color/wosai_upay_bg_white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/signature_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="32dp"
+                    android:text="请在120秒。。。。"
+                    android:textColor="#000"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/cancle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/signature_back_selector"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgRefresh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tvChosen"
+                        android:src="@drawable/wosai_icon_remote_focus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/wosai_bg_bottom"
+                        android:drawableLeft="@drawable/signature_reset"
+                        android:drawablePadding="16dp"
+                        android:gravity="center_vertical"
+                        android:text="重 写"
+                        android:textColor="@android:color/white"
+                        android:textSize="34sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/signature_bg_line"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="2dp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/confirm"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_button_green"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/signature_confirm"
+                    android:drawablePadding="16dp"
+                    android:gravity="center_vertical"
+                    android:text="完 成"
+                    android:textColor="@android:color/white"
+                    android:textSize="34sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/E:/GitHub/upay/app/src/main/res-mpos-sdk/layout/activity_sign_lan.xml -->

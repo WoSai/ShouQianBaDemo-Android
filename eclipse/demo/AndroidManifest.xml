@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wosai.demo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.wosai.upay.MainActivity"
+            android:label="@string/wosai_upay_app_name"
+            android:theme="@style/style_main_pad" >
+            <intent-filter>
+                <action android:name="cn.wosai.upay.CASHIER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.wosai.upay.SettingsActivity"
+            android:label="@string/wosai_upay_activity_settings_title"
+            android:theme="@style/style_main_pad" />
+        <activity
+            android:name="cn.wosai.upay.mobile.AlipayActivity"
+            android:label="@string/wosai_upay_app_name"
+            android:theme="@style/style_main_pad" >
+            <intent-filter>
+                <action android:name="cn.wosai.upay.CHECKOUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lakala.signature.SignatureActivityLan"
+            android:label="@string/wosai_upay_app_name"
+            android:launchMode="standard"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="zxing4wosai.CaptureActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:label="@string/wosai_upay_label_scan"
+            android:screenOrientation="sensor"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="cn.wosai.upay.mpos.MposActivity"
+            android:label="@string/wosai_upay_title_activity_mpos"
+            android:theme="@style/style_main_pad" />
+        <activity
+            android:name="cn.wosai.upay.mobile.WeChatActivity"
+            android:label="@string/title_activity_wechat" >
+        </activity>
+    </application>
+
+</manifest>

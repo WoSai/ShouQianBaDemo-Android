@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_activity_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_dialog_border">
+        <LinearLayout
+            style="@style/style_base_horizontal"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/dialog_img"
+                style="@style/style_img_progress_bar" />
+
+            <TextView
+                android:id="@+id/dialog_content"
+                style="@style/style_text_title_black"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialog_layout_btns"
+            style="@style/style_base"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/dialog_btn_left"
+                style="@style/style_button_common_orange"
+                android:layout_marginEnd="-2dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/dialog_btn_right"
+                style="@style/style_button_common_green"
+                android:layout_marginStart="-2dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout><!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_dialog_alert.xml -->

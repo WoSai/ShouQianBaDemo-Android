@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="2dp"
+        android:color="@color/wosai_upay_transparent" />
+    <corners
+        android:topLeftRadius="7dp"
+        android:topRightRadius="7dp"
+        android:bottomRightRadius="7dp"
+        android:bottomLeftRadius="7dp"
+    />
+    <solid android:color="@color/wosai_upay_transparent"/>
+</shape><!-- From: file:/E:/GitHub/upay/app/src/main/res/drawable/shape_bottom_border.xml -->

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/wosai_upay_text_color_red" android:state_pressed="true" />
+    <item android:color="@color/wosai_upay_text_color_red" android:state_checked="true" />
+    <item android:color="@color/wosai_upay_text_color_white" />
+</selector><!-- From: file:/E:/GitHub/upay/app/src/main/res/drawable/btn_text_color_red.xml -->

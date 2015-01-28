@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_radio_checked_right" android:state_pressed="true"
+        android:color="@color/wosai_upay_text_color_white"/>
+    <item android:drawable="@drawable/shape_radio_checked_right" android:state_checked="true"
+        android:color="@color/wosai_upay_text_color_white"/>
+    <item android:drawable="@drawable/shape_radio_normal_right" android:color="@color/wosai_upay_text_color_yellow" />
+</selector><!-- From: file:/E:/GitHub/upay/app/src/main/res/drawable/selector_radio_right.xml -->
