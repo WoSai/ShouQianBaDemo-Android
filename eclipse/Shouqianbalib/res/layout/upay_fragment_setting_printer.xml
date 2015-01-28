@@ -12,7 +12,7 @@
             android:text="@string/wosai_upay_text_print_sign_bank" />
 
 
-        <cn.wosai.upay.widget.ToggleButton
+        <cn.wosai.upay.widget.togglebtn.ToggleButton
             xmlns:toggle="http://schemas.android.com/apk/res-auto"
             android:id="@+id/tbPrinter"
             android:layout_width="54dp"
