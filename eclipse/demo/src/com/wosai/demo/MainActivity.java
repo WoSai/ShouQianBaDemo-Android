@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
 
 	private void checkout() {
 		OrderInfo info = new OrderInfo();
+		info.setOrderId("YourORderNo."+System.currentTimeMillis());
 		info.setMerchantId("100512354");
 		info.setAppId("150039203");
 		String sign = md5(info.getMerchantId() + info.getAppId() + key);
@@ -81,7 +82,7 @@ public class MainActivity extends Activity {
 	
 	private void queryOrder(OrderInfo info){
 		//查询订单接口
-		UpayTask.queryOrder(info, new UpayCallBack() {
+		new UpayTask(this).queryOrder(info, new UpayCallBack() {
 			@Override
 			public void onExecuteResult(UpayResult result) {
 				
