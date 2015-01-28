@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainView"
+    style="@style/style_activity_parent">
+
+
+    <RelativeLayout style="@style/style_activity_main">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wosai_upay_cash_header_height"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/amountHeader"
+                style="@style/style_text_sub_title_gray"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/wosai_upay_main_title_margin_left"
+                android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
+                android:text="@string/wosai_upay_text_cashier" />
+
+            <EditText
+                android:id="@+id/etAmount"
+                style="@style/style_text_title"
+                android:background="@color/wosai_upay_transparent"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:enabled="false"
+                android:inputType="numberDecimal"
+                android:text="0.01"
+                android:textColor="@color/wosai_upay_text_color_red"
+                android:textSize="@dimen/wosai_upay_text_size_title_money" />
+
+            <ImageButton
+                android:id="@+id/btnFinish"
+                style="@style/style_img_btn_right"
+                android:background="@drawable/selector_img_button_delete" />
+
+            <TextView
+                android:id="@+id/tvNotice"
+                style="@style/style_text_sub_title_gray"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wosai_upay_main_notice_height"
+                android:layout_alignParentBottom="true"
+                android:background="@color/wosai_upay_bg_main_notice"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="浦发银行交易暂停，时间待定！浦发银行交易暂停，时间待定！浦发银行交易暂停，时间待定！浦发银行交易暂停，时间待定！"
+                android:textColor="@color/wosai_upay_text_color_deep_orange" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_choose"
+            style="@style/style_text_sub_title_desc"
+            android:layout_below="@+id/top"
+            android:text="@string/wosai_upay_text_choose_pay_method" />
+
+
+        <RelativeLayout
+            android:id="@+id/checkoutMpos"
+            style="@style/style_rl_btn_main_item"
+            android:layout_below="@+id/text_choose">
+
+            <ImageView
+                android:id="@+id/imgUnion"
+                style="@style/style_img_icon_main"
+                android:src="@drawable/wosai_icon_union" />
+
+            <TextView
+                style="@style/style_text_content"
+                android:layout_toRightOf="@+id/imgUnion"
+                android:text="@string/wosai_upay_text_union"
+                android:textColor="@drawable/link_text_color" />
+
+            <ImageView
+                style="@style/style_img_icon_arrow_right"
+                android:src="@drawable/selector_arrow_right" />
+
+            <ImageView style="@style/style_img_divider" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/checkoutMobile"
+            style="@style/style_rl_btn_main_item"
+            android:layout_below="@+id/checkoutMpos">
+
+            <ImageView
+                android:id="@+id/imgAlipay"
+                style="@style/style_img_icon_main"
+                android:src="@drawable/wosai_icon_alipay" />
+
+            <TextView
+                style="@style/style_text_content"
+                android:layout_toRightOf="@+id/imgAlipay"
+                android:text="@string/wosai_upay_text_alipay"
+                android:textColor="@drawable/link_text_color" />
+
+            <ImageView
+                style="@style/style_img_icon_arrow_right"
+                android:src="@drawable/selector_arrow_right" />
+
+            <ImageView style="@style/style_img_divider" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/checkoutWeChat"
+            style="@style/style_rl_btn_main_item"
+            android:layout_below="@+id/checkoutMobile">
+
+            <ImageView
+                android:id="@+id/imgWeChat"
+                style="@style/style_img_icon_main"
+                android:src="@drawable/selector_img_wechat" />
+
+            <TextView
+                style="@style/style_text_content"
+                android:layout_toRightOf="@+id/imgWeChat"
+                android:text="@string/wosai_upay_text_wechat"
+                android:textColor="@drawable/link_text_color" />
+
+            <ImageView
+                style="@style/style_img_icon_arrow_right"
+                android:src="@drawable/selector_arrow_right" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/style_base_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/checkoutWeChat"
+            android:background="@drawable/wosai_bg_bottom"
+            android:focusable="false">
+
+            <ImageButton
+                android:id="@+id/settings"
+                style="@style/style_img_btn_right_center"
+                android:background="@drawable/selector_img_button_setting" />
+
+            <TextView
+                android:id="@+id/queryAmount"
+                style="@style/style_text_sub_title_gray"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/wosai_upay_main_notice_height"
+                android:text="@string/wosai_upay_text_query_amount"
+                android:textColor="@drawable/link_text_color" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            style="@style/style_base_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/wosai_upay_padding_edit"
+            android:background="@color/wosai_upay_bg_white"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/style_progress_bar" />
+
+            <TextView
+                android:id="@+id/tvNoticeMsg"
+                style="@style/style_text_money"
+                android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
+                android:text="@string/wosai_upay_text_checking"
+                android:textColor="@color/wosai_upay_text_color_gray" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+<!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_activity_main.xml -->

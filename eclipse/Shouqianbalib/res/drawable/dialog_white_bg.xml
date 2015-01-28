@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <corners android:bottomRightRadius="8dp"
+        android:bottomLeftRadius="8dp"/>
+	<solid android:color="@color/font_white_color"/>
+</shape>
+<!-- From: file:/E:/GitHub/upay/app/src/main/res-mpos-sdk/drawable/dialog_white_bg.xml -->

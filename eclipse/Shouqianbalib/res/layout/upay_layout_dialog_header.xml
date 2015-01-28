@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_dialog_header">
+
+    <LinearLayout
+        style="@style/style_base"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDesc"
+            style="@style/style_dialog_head_text"
+            android:layout_marginEnd="@dimen/wosai_upay_margin_border"
+            android:text="@string/wosai_upay_text_bank_payment" />
+
+        <TextView
+            android:id="@+id/amount"
+            style="@style/style_dialog_head_text"
+            android:text="{金额}" />
+
+    </LinearLayout>
+
+    <ImageView style="@style/style_divider_line" />
+</RelativeLayout>
+
+
+
+<!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_layout_dialog_header.xml -->

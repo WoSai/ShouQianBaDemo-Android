@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <include layout="@layout/upay_layout_dialog_header" />
+
+
+    <LinearLayout
+        style="@style/style_base_center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/style_base_center"
+            android:src="@drawable/icon_failed" />
+
+        <TextView
+            style="@style/style_text_title"
+            android:layout_marginTop="@dimen/wosai_upay_margin_border"
+            android:text="@string/wosai_upay_text_alipay_fail"
+            android:textColor="@color/wosai_upay_text_color_black" />
+
+
+
+        <LinearLayout
+            style="@style/style_base"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_content_smaller"
+                android:layout_marginTop="@dimen/wosai_upay_margin_border"
+                android:text="@string/wosai_upay_text_error_code" />
+
+            <TextView
+                style="@style/style_text_content_smaller"
+                android:layout_marginTop="@dimen/wosai_upay_margin_border"
+                android:text="@string/wosai_upay_text_colon" />
+
+            <TextView
+                android:id="@+id/resultCode"
+                style="@style/style_text_content_smaller"
+                android:layout_marginTop="@dimen/wosai_upay_margin_border"
+                android:text="51" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/prompt"
+            style="@style/style_text_content_smaller"
+            android:text="message" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        style="@style/style_divider_line"
+        android:layout_above="@+id/footer"
+        android:layout_alignParentBottom="false" />
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRepay"
+            style="@style/style_button_dialog"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="@string/wosai_upay_text_repay" />
+
+        <ImageView
+            style="@style/style_divider_line"
+            android:layout_width="1dp"
+            android:visibility="gone"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btnChange"
+            style="@style/style_button_dialog"
+            android:layout_weight="1"
+            android:text="@string/wosai_upay_text_ok" />
+    </LinearLayout>
+
+</RelativeLayout>
+<!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_fragment_mobile_fail.xml -->

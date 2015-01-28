@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:color="@color/wosai_upay_edit_text_blue_focus" android:width="2dp" />
+    <corners android:radius="5dp" />
+    <solid android:color="@color/wosai_upay_text_color_white" />
+</shape><!-- From: file:/E:/GitHub/upay/app/src/main/res/drawable/shape_edit_text_focus.xml -->
