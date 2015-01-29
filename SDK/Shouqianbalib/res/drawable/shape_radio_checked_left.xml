@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="2dp"
+        android:color="@color/wosai_upay_common_green" />
+    <corners
+        android:bottomLeftRadius="5dp"
+        android:bottomRightRadius="0dp"
+        android:topLeftRadius="5dp"
+        android:topRightRadius="0dp" />
+    <solid android:color="@color/wosai_upay_common_green" />
+</shape><!-- From: file:/E:/GitHub/upay/app/src/main/res/drawable/shape_radio_checked_left.xml -->

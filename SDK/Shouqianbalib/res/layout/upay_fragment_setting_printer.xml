@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout style="@style/style_item_text_icon">
+
+        <TextView
+            style="@style/style_text_content_black"
+            android:layout_alignParentLeft="true"
+            android:text="@string/wosai_upay_text_print_sign_bank" />
+
+
+        <cn.wosai.upay.widget.togglebtn.ToggleButton
+            xmlns:toggle="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tbPrinter"
+            android:layout_width="54dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            toggle:borderWidth="1dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <ImageView style="@style/style_divider_line" />
+
+    <LinearLayout
+        android:id="@+id/llBlueTooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlChosen"
+            style="@style/style_item_text_icon">
+
+            <TextView
+                android:id="@+id/tvChosen"
+                style="@style/style_text_content_black"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="L_B850000001"
+                android:textColor="@color/wosai_upay_text_color_black" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/space"
+                android:layout_centerInParent="true"
+                android:src="@drawable/wosai_icon_success_small" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/style_item_text_icon_second">
+
+            <TextView
+                style="@style/style_text_sub_title_desc"
+                android:padding="0dp"
+                android:text="@string/wosai_upay_text_choose_pos" />
+
+            <ImageView
+                android:id="@+id/imgRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/wosai_icon_refresh" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lvDevices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/wosai_upay_margin_bottom"
+            android:layoutAnimation="@anim/list_anim_layout"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+</LinearLayout>
+<!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_fragment_setting_printer.xml -->

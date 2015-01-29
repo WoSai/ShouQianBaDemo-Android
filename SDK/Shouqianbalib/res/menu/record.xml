@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cn.wosai.upay.RecordActivity">
+    <item
+        android:id="@+id/menu_exit_app"
+        android:showAsAction="always|withText"
+        android:title="@string/wosai_upay_menu_exit_app" />
+    <item
+        android:id="@+id/menu_back"
+        android:showAsAction="always|withText"
+        android:title="@string/wosai_upay_menu_back" />
+</menu>
+<!-- From: file:/E:/GitHub/upay/app/src/main/res/menu/record.xml -->

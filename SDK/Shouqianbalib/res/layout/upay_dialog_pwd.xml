@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_activity_main">
+
+    <ImageButton
+        android:id="@+id/dialog_btn_left"
+        style="@style/style_img_btn_right"
+        android:background="@drawable/wosai_icon_delete" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/wosai_upay_main_title_margin_left"
+        android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/style_text_sub_title_gray"
+            android:layout_marginRight="@dimen/wosai_upay_margin_bottom"
+            android:text="@string/wosai_upay_text_revoke_amount" />
+
+        <TextView
+            style="@style/style_text_content_black"
+            android:id="@+id/tvAmount"
+            android:textSize="@dimen/wosai_upay_text_size_item" />
+
+        <TextView
+            style="@style/style_text_content_black"
+            android:text="元"
+            android:textSize="@dimen/wosai_upay_text_size_item" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progressLayout"
+        style="@style/style_base_vertical"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true">
+
+        <EditText
+            android:id="@+id/etPwd"
+            style="@style/style_edit_text_blue"
+            android:hint="@string/wosai_upay_text_input_admin_pwd" />
+
+        <TextView
+            android:id="@+id/tvErrorMsg"
+            style="@style/style_text_title_black"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/wosai_upay_margin_bottom"
+            android:drawableStart="@drawable/icon_wraning"
+            android:gravity="center"
+            android:text="@string/wosai_upay_error_pwd"
+            android:textSize="@dimen/wosai_upay_text_size_content_smaller" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dialog_btn_right"
+        style="@style/style_button_common_green"
+        android:layout_below="@+id/progressLayout"
+        android:layout_centerInParent="true"
+        android:text="@string/wosai_upay_text_ok" />
+
+</RelativeLayout><!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_dialog_pwd.xml -->

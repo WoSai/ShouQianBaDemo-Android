@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wosai_upay_text_color_white"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/style_item_text_icon">
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/style_text_content_black"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="L_B850000001"
+            android:textColor="@color/wosai_upay_text_color_black" />
+
+        <TextView
+            android:id="@+id/state"
+            style="@style/style_text_content_smaller"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/wosai_upay_text_color_gray" />
+    </RelativeLayout>
+
+    <ImageView style="@style/style_divider_line" />
+
+
+</LinearLayout><!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_item_bluetooth.xml -->
