@@ -101,6 +101,7 @@
     <dimen name="wosai_upay_progress_bar_height">100dp</dimen>
     <dimen name="wosai_upay_progress_bar_width">100dp</dimen>
     <dimen name="wosai_upay_rl_item_height">48dp</dimen>
+    <dimen name="wosai_upay_scan_size">400dp</dimen>
     <dimen name="wosai_upay_text_size_content">22sp</dimen>
     <dimen name="wosai_upay_text_size_content_lower">18sp</dimen>
     <dimen name="wosai_upay_text_size_content_smaller">16sp</dimen>
@@ -111,18 +112,12 @@
     <dimen name="wosai_upay_text_size_title_money">48sp</dimen>
     <!-- From: file:/E:/GitHub/upay/app/src/main/res/values/ids.xml -->
     <eat-comment/>
-    <item name="auto_focus" type="id"/>
     <item name="decode" type="id"/>
     <item name="decode_failed" type="id"/>
     <item name="decode_succeeded" type="id"/>
-    <item name="encode_failed" type="id"/>
-    <item name="encode_succeeded" type="id"/>
-    <item name="launch_product_query" type="id"/>
     <item name="quit" type="id"/>
     <item name="restart_preview" type="id"/>
     <item name="return_scan_result" type="id"/>
-    <item name="search_book_contents_failed" type="id"/>
-    <item name="search_book_contents_succeeded" type="id"/>
     <!-- From: file:/E:/GitHub/upay/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
@@ -178,6 +173,8 @@
     <string name="wosai_upay_text_print_sign_bank">银行卡签购单打印</string>
     <string name="wosai_upay_text_printer">打印机设备</string>
     <string name="wosai_upay_text_progressing">交易处理中,请稍候…</string>
+    <string name="wosai_upay_text_qrcode">请输入付款码</string>
+    <string name="wosai_upay_text_qrcode_hint">付款码在条码下方</string>
     <string name="wosai_upay_text_query_amount"><u>银行卡余额查询</u></string>
     <string name="wosai_upay_text_radio_month">当月</string>
     <string name="wosai_upay_text_radio_pos">Pos</string>
@@ -207,9 +204,8 @@
     <string name="wosai_upay_title_activity_record">交易记录</string>
     <!-- From: file:/E:/GitHub/upay/app/src/main/res/values/styles.xml -->
     <eat-comment/>
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar"/>
-    <style name="DialogTheme" parent="android:Theme.Holo.Light.DialogWhenLarge.NoActionBar">
-        <item name="android:windowCloseOnTouchOutside">false</item>
+    <style name="AppTheme" parent="android:Theme.Light">
+        <item name="android:windowNoTitle">true</item>
     </style>
     <!-- From: file:/E:/GitHub/upay/app/src/main/res-mpos-sdk/values/styles.xml -->
     <eat-comment/>
@@ -256,8 +252,16 @@
     <style name="style_base_horizontal" parent="style_base">
         <item name="android:orientation">horizontal</item>
     </style>
+    <style name="style_base_horizontal_full" parent="style_base">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
     <style name="style_base_vertical" parent="style_base">
         <item name="android:orientation">vertical</item>
+    </style>
+    <style name="style_base_vertical_full" parent="style_base">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="style_button_common">
         <item name="android:layout_width">@dimen/wosai_upay_common_btn_width</item>
@@ -336,8 +340,8 @@
         <item name="android:layout_height">@dimen/wosai_upay_list_item_height</item>
         <item name="android:layout_centerInParent">true</item>
         <item name="android:layout_margin">@dimen/wosai_upay_margin_bottom</item>
-        <item name="android:paddingStart">@dimen/wosai_upay_margin_border</item>
-        <item name="android:paddingEnd">@dimen/wosai_upay_margin_border</item>
+        <item name="android:paddingLeft">@dimen/wosai_upay_margin_border</item>
+        <item name="android:paddingRight">@dimen/wosai_upay_margin_border</item>
         <item name="android:textSize">@dimen/wosai_upay_text_size_content</item>
         <item name="android:textColor">@color/wosai_upay_text_color_black</item>
         <item name="android:gravity">center|center_vertical</item>
@@ -364,7 +368,6 @@
     <style name="style_img_icon" parent="style_base">
         <item name="android:layout_centerInParent">true</item>
         <item name="android:layout_alignParentLeft">true</item>
-        <item name="android:layout_alignParentStart">true</item>
         <item name="android:scaleType">fitXY</item>
     </style>
     <style name="style_img_icon_arrow_right" parent="style_base">
@@ -372,14 +375,12 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_centerInParent">true</item>
         <item name="android:layout_alignParentRight">true</item>
-        <item name="android:layout_alignParentEnd">true</item>
         <item name="android:layout_marginRight">@dimen/wosai_upay_main_title_margin_top</item>
     </style>
     <style name="style_img_icon_main" parent="style_img_icon">
         <item name="android:layout_width">@dimen/wosai_upay_main_choose_pay_height</item>
         <item name="android:layout_height">@dimen/wosai_upay_main_choose_pay_height</item>
         <item name="android:layout_alignParentLeft">true</item>
-        <item name="android:layout_alignParentStart">true</item>
         <item name="android:layout_marginLeft">@dimen/wosai_upay_main_title_margin_top</item>
     </style>
     <style name="style_img_progress_bar">
@@ -408,11 +409,11 @@
 
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">start</item>
+        <item name="android:gravity">left</item>
         <item name="android:paddingTop">@dimen/wosai_upay_margin_border</item>
         <item name="android:paddingBottom">@dimen/wosai_upay_margin_border</item>
-        <item name="android:paddingStart">@dimen/wosai_upay_margin_bottom</item>
-        <item name="android:paddingEnd">@dimen/wosai_upay_margin_bottom</item>
+        <item name="android:paddingLeft">@dimen/wosai_upay_margin_bottom</item>
+        <item name="android:paddingRight">@dimen/wosai_upay_margin_bottom</item>
         <item name="android:textSize">@dimen/wosai_upay_text_size_content</item>
 
     </style>
@@ -449,9 +450,7 @@
         <item name="android:layout_marginBottom">@dimen/wosai_upay_margin_bottom</item>
         <item name="android:layout_width">@dimen/wosai_upay_common_btn_width</item>
         <item name="android:layout_marginLeft">@dimen/wosai_upay_margin_border</item>
-        <item name="android:layout_marginStart">@dimen/wosai_upay_margin_border</item>
         <item name="android:layout_marginRight">@dimen/wosai_upay_margin_border</item>
-        <item name="android:layout_marginEnd">@dimen/wosai_upay_margin_border</item>
         <item name="android:layout_gravity">center_horizontal</item>
     </style>
     <style name="style_rl_btn_main_item" parent="style_button_common">
@@ -464,7 +463,6 @@
         <item name="android:layout_centerInParent">true</item>
         <item name="android:textSize">@dimen/wosai_upay_text_size_content</item>
         <item name="android:paddingLeft">@dimen/wosai_upay_margin_border</item>
-        <item name="android:paddingStart">@dimen/wosai_upay_margin_border</item>
         <item name="android:textColor">@color/wosai_upay_text_color_gray</item>
     </style>
     <style name="style_text_content_black" parent="style_base">
@@ -498,6 +496,15 @@
         <item name="android:textSize">@dimen/wosai_upay_text_size_content</item>
 
     </style>
+    <style name="style_text_ticket_left" parent="style_text_content_black">
+        <item name="android:layout_centerInParent">false</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">left</item>
+    </style>
+    <style name="style_text_ticket_right" parent="style_text_ticket_left">
+        <item name="android:gravity">right</item>
+    </style>
     <style name="style_text_title" parent="style_base">
         <item name="android:layout_centerInParent">true</item>
         <item name="android:textSize">@dimen/wosai_upay_text_size_title</item>
@@ -508,9 +515,5 @@
         <item name="android:layout_centerInParent">true</item>
         <item name="android:textColor">@color/wosai_upay_text_color_black</item>
         <item name="android:textStyle">normal</item>
-    </style>
-    <style name="translucent" parent="DialogTheme">
-        <item name="android:windowBackground">@color/wosai_upay_transparent</item>
-        <item name="android:windowIsTranslucent">true</item>
     </style>
 </resources>

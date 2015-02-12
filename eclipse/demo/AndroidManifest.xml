@@ -40,6 +40,7 @@
         </activity>
         <activity
             android:name="cn.wosai.upay.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/wosai_upay_app_name"
             android:theme="@style/style_main_pad" >
             <intent-filter>
@@ -50,10 +51,12 @@
         </activity>
         <activity
             android:name="cn.wosai.upay.SettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/wosai_upay_activity_settings_title"
             android:theme="@style/style_main_pad" />
         <activity
             android:name="cn.wosai.upay.mobile.AlipayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/wosai_upay_app_name"
             android:theme="@style/style_main_pad" >
             <intent-filter>
@@ -70,16 +73,22 @@
         <activity
             android:name="zxing4wosai.CaptureActivity"
             android:configChanges="orientation|keyboard|keyboardHidden"
-            android:label="@string/wosai_upay_label_scan"
-            android:screenOrientation="sensor"
-            android:theme="@style/AppTheme" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="cn.wosai.upay.mpos.MposActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/wosai_upay_title_activity_mpos"
             android:theme="@style/style_main_pad" />
         <activity
-            android:name="cn.wosai.upay.mobile.WeChatActivity"
+            android:name="cn.wosai.upay.mobile.WechatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_wechat" >
+            <intent-filter>
+                <action android:name="cn.wosai.upay.CHECKOUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

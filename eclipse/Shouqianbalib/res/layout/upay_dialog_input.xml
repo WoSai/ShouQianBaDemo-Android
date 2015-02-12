@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/wosai_upay_bg_white"
+    android:orientation="vertical">
+
+
+    <TextView
+        style="@style/style_text_content_black"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="false"
+        android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
+        android:gravity="center"
+        android:text="@string/wosai_upay_text_qrcode"
+        android:textSize="@dimen/wosai_upay_text_size_item" />
+
+
+    <EditText
+        android:id="@+id/etCode"
+        style="@style/style_edit_text_blue"
+        android:layout_centerInParent="true"
+        android:inputType="number"
+        android:cursorVisible="true"
+        android:hint="@string/wosai_upay_text_qrcode_hint" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_btn_left"
+            style="@style/style_button_dialog"
+            android:layout_width="0dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:text="@string/wosai_upay_text_cancel" />
+
+        <Button
+            android:id="@+id/dialog_btn_right"
+            style="@style/style_button_dialog"
+            android:layout_width="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:text="@string/wosai_upay_text_ok" />
+    </LinearLayout>
+</LinearLayout><!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_dialog_input.xml -->

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <SurfaceView
+            android:id="@+id/capture_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/capture_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/capture_mask_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/capture_crop_view"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/shadow" />
+
+            <RelativeLayout
+                android:id="@+id/capture_crop_view"
+                android:layout_width="@dimen/wosai_upay_scan_size"
+                android:layout_height="@dimen/wosai_upay_scan_size"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/wosai_upay_bg_capture">
+
+                <ImageView
+                    android:id="@+id/capture_scan_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/wosai_upay_img_scan_line" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/capture_mask_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/capture_crop_view"
+                android:background="@drawable/shadow" />
+
+            <ImageView
+                android:id="@+id/capture_mask_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@id/capture_mask_bottom"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/capture_mask_top"
+                android:layout_toLeftOf="@id/capture_crop_view"
+                android:background="@drawable/shadow" />
+
+            <ImageView
+                android:id="@+id/capture_mask_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@id/capture_mask_bottom"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/capture_mask_top"
+                android:layout_toRightOf="@id/capture_crop_view"
+                android:background="@drawable/shadow" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/btnCancel"
+            style="@style/style_base"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_arrow_left_white" />
+
+            <TextView
+                style="@style/style_text_title"
+                android:layout_gravity="center"
+                android:text="@string/wosai_upay_text_back"
+                android:textColor="@drawable/link_text_color" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@drawable/selector_wosai_img_input_code" />
+
+        <Button
+            android:id="@+id/btnToScanPage"
+            style="@style/style_img_btn"
+            android:layout_margin="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/selector_wosai_img_scaner" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scannerPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/wosai_upay_bg_white">
+
+        <LinearLayout
+            android:id="@+id/btnCancelScan"
+            style="@style/style_base"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_arrow_left" />
+
+            <TextView
+                style="@style/style_text_title"
+                android:layout_gravity="center"
+                android:text="@string/wosai_upay_text_back"
+                android:textColor="@drawable/link_text_color" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnToZxing"
+            style="@style/style_img_btn"
+            android:layout_margin="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/selector_wosai_img_qrcode_scan" />
+
+        <ImageView
+            android:id="@+id/imgScanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/wosai_img_scaner_page" />
+
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_width="@dimen/wosai_upay_popup_height"
+            android:layout_below="@+id/imgScanner"
+            android:layout_height="@dimen/wosai_upay_main_padding"
+            android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
+            style="@style/style_edit_text_blue"
+            android:textColor="@color/wosai_upay_text_color_green"
+            android:textSize="@dimen/wosai_upay_text_size_large"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</FrameLayout><!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_activity_capture.xml -->

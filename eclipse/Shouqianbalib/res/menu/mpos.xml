@@ -4,6 +4,6 @@
     <item android:id="@+id/action_settings"
         android:title="@string/wosai_upay_action_settings"
         android:orderInCategory="100"
-        android:showAsAction="never" />
+       />
 </menu>
 <!-- From: file:/E:/GitHub/upay/app/src/main/res/menu/mpos.xml -->

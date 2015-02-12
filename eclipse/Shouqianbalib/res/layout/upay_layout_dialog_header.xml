@@ -9,7 +9,7 @@
         <TextView
             android:id="@+id/tvDesc"
             style="@style/style_dialog_head_text"
-            android:layout_marginEnd="@dimen/wosai_upay_margin_border"
+            android:layout_marginRight="@dimen/wosai_upay_margin_border"
             android:text="@string/wosai_upay_text_bank_payment" />
 
         <TextView

@@ -146,6 +146,7 @@
         android:background="@color/wosai_upay_transparent"
         android:textColor="@color/wosai_upay_text_color_green"
         android:textSize="@dimen/wosai_upay_text_size_large"
+        android:text="1111111111111"
         android:textStyle="bold"
         android:layout_width="@dimen/wosai_upay_popup_height"
         android:layout_height="@dimen/wosai_upay_main_padding" />

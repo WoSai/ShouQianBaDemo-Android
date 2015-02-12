@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wosai_upay_bg_white">
+
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wosai_upay_main_choose_item_height"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/wosai_upay_main_title_margin_left"
+            android:background="@drawable/selector_arrow_left" />
+
+        <TextView
+            android:id="@+id/tvStoreName"
+            style="@style/style_text_title_black" />
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/wosai_upay_margin_bottom"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbPos"
+            style="@style/style_button_radio_left"
+            android:checked="true"
+            android:text="@string/wosai_upay_text_radio_pos" />
+
+        <RadioButton
+            android:id="@+id/rbPrinter"
+            style="@style/style_button_radio_right"
+            android:text="@string/wosai_upay_text_radio_printer" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/line"
+        style="@style/style_divider_line"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/space"
+        style="@style/style_text_sub_title_desc"
+        android:layout_height="@dimen/wosai_upay_main_title_margin_top"
+        android:layout_below="@+id/line" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/space" />
+
+</RelativeLayout>
+<!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_activity_setting_phone.xml -->

@@ -4,6 +4,5 @@
     <item
         android:id="@+id/menu_list_record"
         android:icon="@drawable/icon_menu"
-        android:showAsAction="always|withText"
         android:title="@string/wosai_upay_menu_list_record" />
 </menu><!-- From: file:/E:/GitHub/upay/app/src/main/res/menu/main_menu.xml -->

@@ -2,6 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="cn.wosai.upay.mobile.WeChatActivity">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" android:showAsAction="never" />
+        android:orderInCategory="100"   />
 </menu>
 <!-- From: file:/E:/GitHub/upay/app/src/main/res/menu/menu_wechat.xml -->

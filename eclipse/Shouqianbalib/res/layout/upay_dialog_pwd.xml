@@ -46,7 +46,7 @@
             style="@style/style_text_title_black"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/wosai_upay_margin_bottom"
-            android:drawableStart="@drawable/icon_wraning"
+            android:drawableLeft="@drawable/icon_wraning"
             android:gravity="center"
             android:text="@string/wosai_upay_error_pwd"
             android:textSize="@dimen/wosai_upay_text_size_content_smaller" />
