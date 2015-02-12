@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wosai_upay_bg_white">
+
+    <LinearLayout
+        android:id="@+id/llProgress"
+        style="@style/style_base_vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/style_progress_bar"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgNotice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/wosai_img_swiper"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/tvNotice"
+            style="@style/style_text_money"
+            android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
+            android:text="@string/wosai_upay_text_executing"
+            android:textColor="@color/wosai_upay_text_color_gray" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llError"
+        style="@style/style_base_vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/imgError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/wosai_icon_error" />
+
+
+        <TextView
+            android:id="@+id/tvErrorMsg"
+            style="@style/style_base"
+            android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
+            android:gravity="center"
+            android:padding="@dimen/wosai_upay_margin_border"
+            android:text="余额不足"
+            android:textColor="@color/wosai_upay_text_color_gray"
+            android:textSize="@dimen/wosai_upay_text_size_title" />
+
+        <TextView
+            android:id="@+id/tvErrorCode"
+            style="@style/style_base"
+            android:layout_marginBottom="@dimen/wosai_upay_main_title_margin_top"
+            android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
+            android:text="111111"
+            android:textColor="@color/wosai_upay_text_color_gray"
+            android:textSize="@dimen/wosai_upay_text_size_item" />
+
+        <Button
+            android:id="@+id/btnError"
+            style="@style/style_button_common_green"
+            android:text="@string/wosai_upay_text_ok" />
+    </LinearLayout>
+</RelativeLayout><!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_activity_mpos_phone.xml -->

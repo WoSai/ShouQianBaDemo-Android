@@ -6,206 +6,195 @@
     android:background="@color/wosai_upay_transparent">
 
     <RelativeLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/layoutBtns"
-        android:background="@drawable/wosai_bg_ticket"
-        android:paddingLeft="100dp"
-        android:paddingRight="100dp"
-        >
+        android:background="@drawable/wosai_img_bg_ticket"
+        android:paddingLeft="@dimen/wosai_upay_progress_bar_width"
+        android:paddingRight="@dimen/wosai_upay_progress_bar_width">
 
 
-        <RelativeLayout
-            android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
+        <LinearLayout
+            style="@style/style_base_vertical_full"
             android:layout_width="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-            android:layout_height="wrap_content">
+            android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top">
 
-            <TextView
-                style="@style/style_text_content_normal"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="银行卡号:" />
+            <LinearLayout
+                style="@style/style_base_horizontal_full"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border">
 
-            <TextView
-                android:id="@+id/tv_merchant_no"
-                style="@style/style_text_content_normal"
-                android:layout_alignParentEnd="true"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="13531632135" />
+                <TextView
+                    style="@style/style_text_ticket_left"
+                    android:text="银行卡号:" />
 
-            <TextView
-                style="@style/style_text_content_normal"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tv_merchant_no"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="终端编号:" />
+                <TextView
+                    android:id="@+id/tv_merchant_no"
+                    style="@style/style_text_ticket_right"
+                    android:text="13531632135" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_device_no"
-                style="@style/style_text_content_normal"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/tv_merchant_no"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="13531632135" />
+            <LinearLayout
+                style="@style/style_base_horizontal_full"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border">
 
+                <TextView
+                    style="@style/style_text_ticket_left"
+                    android:text="终端编号:" />
 
-            <TextView
-                style="@style/style_text_content_normal"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tv_device_no"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="收单机构:" />
+                <TextView
+                    android:id="@+id/tv_device_no"
+                    style="@style/style_text_ticket_right"
+                    android:text="13531632135" />
 
-            <TextView
-                android:id="@+id/tv_agency"
-                style="@style/style_text_content_normal"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/tv_device_no"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="收单机构" />
+            </LinearLayout>
 
-            <TextView
-                style="@style/style_text_content_normal"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tv_agency"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="交易号:" />
+            <LinearLayout
+                style="@style/style_base_horizontal_full"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border">
 
-            <TextView
-                android:id="@+id/tv_order_no"
-                style="@style/style_text_content_normal"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/tv_agency"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="交易号" />
+                <TextView
+                    style="@style/style_text_ticket_left"
+                    android:text="收单机构:" />
 
-            <TextView
-                style="@style/style_text_content_normal"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tv_order_no"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="发卡机构:" />
+                <TextView
+                    android:id="@+id/tv_agency"
+                    style="@style/style_text_ticket_right"
+                    android:text="收单机构" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_card_bank"
-                style="@style/style_text_content_normal"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/tv_order_no"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="发卡机构" />
+            <LinearLayout
+                style="@style/style_base_horizontal_full"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border">
 
-            <TextView
-                style="@style/style_text_content_normal"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tv_card_bank"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="交易类型:" />
+                <TextView
+                    style="@style/style_text_ticket_left"
+                    android:text="交易号:" />
 
-            <TextView
-                android:id="@+id/tv_order_type"
-                style="@style/style_text_content_normal"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/tv_card_bank"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="交易类型" />
+                <TextView
+                    android:id="@+id/tv_order_no"
+                    style="@style/style_text_ticket_right"
+                    android:text="交易号" />
+            </LinearLayout>
 
-            <TextView
-                style="@style/style_text_content_normal"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tv_order_type"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="交易时间:" />
+            <LinearLayout
+                style="@style/style_base_horizontal_full"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border">
 
-            <TextView
-                android:id="@+id/tv_time"
-                style="@style/style_text_content_normal"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/tv_order_type"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="交易时间" />
+                <TextView
+                    style="@style/style_text_ticket_left"
+                    android:text="发卡机构:" />
 
-            <TextView
-                style="@style/style_text_content_normal"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tv_time"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="授权号:" />
+                <TextView
+                    android:id="@+id/tv_card_bank"
+                    style="@style/style_text_ticket_right"
+                    android:text="发卡机构" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_auth_no"
-                style="@style/style_text_content_normal"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/tv_time"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="授权号" />
+            <LinearLayout
+                style="@style/style_base_horizontal_full"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border">
 
-            <TextView
-                style="@style/style_text_content_normal"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tv_auth_no"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="批次号:" />
+                <TextView
+                    style="@style/style_text_ticket_left"
+                    android:text="交易类型:" />
 
-            <TextView
-                android:id="@+id/tv_batch_no"
-                style="@style/style_text_content_normal"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/tv_auth_no"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="批次号" />
+                <TextView
+                    android:id="@+id/tv_order_type"
+                    style="@style/style_text_ticket_right"
+                    android:text="交易类型" />
+            </LinearLayout>
 
-            <TextView
-                style="@style/style_text_content_normal"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tv_batch_no"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="检索参考号:" />
+            <LinearLayout
+                style="@style/style_base_horizontal_full"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border">
 
-            <TextView
-                android:id="@+id/tv_search_no"
-                style="@style/style_text_content_normal"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/tv_batch_no"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="检索参考号" />
+                <TextView
+                    style="@style/style_text_ticket_left"
+                    android:text="交易时间:" />
 
-            <TextView
-                style="@style/style_text_content_normal"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tv_search_no"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="付款金额:" />
+                <TextView
+                    android:id="@+id/tv_time"
+                    style="@style/style_text_ticket_right"
+                    android:text="交易时间" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_amount"
-                style="@style/style_text_content_normal"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/tv_search_no"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="付款金额" />
+            <LinearLayout
+                style="@style/style_base_horizontal_full"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border">
 
-            <TextView
-                android:id="@+id/tv_signature"
-                style="@style/style_text_content_normal"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tv_amount"
-                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
-                android:text="签名:" />
+                <TextView
+                    style="@style/style_text_ticket_left"
+                    android:text="授权号:" />
 
-            <ImageView
-                android:id="@+id/img_signature"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/tv_amount"
-                android:layout_toEndOf="@id/tv_signature" />
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_auth_no"
+                    style="@style/style_text_ticket_right"
+                    android:text="授权号" />
+            </LinearLayout>
 
+            <LinearLayout
+                style="@style/style_base_horizontal_full"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border">
 
+                <TextView
+                    style="@style/style_text_ticket_left"
+                    android:text="批次号:" />
+
+                <TextView
+                    android:id="@+id/tv_batch_no"
+                    style="@style/style_text_ticket_right"
+                    android:text="批次号" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/style_base_horizontal_full"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border">
+
+                <TextView
+                    style="@style/style_text_ticket_left"
+                    android:text="检索参考号:" />
+
+                <TextView
+                    android:id="@+id/tv_search_no"
+                    style="@style/style_text_ticket_right"
+                    android:text="检索参考号" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/style_base_horizontal_full"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border">
+
+                <TextView
+                    style="@style/style_text_ticket_left"
+                    android:text="付款金额:" />
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    style="@style/style_text_ticket_right"
+                    android:text="付款金额" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/style_base_horizontal_full"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border">
+
+                <TextView
+                    android:id="@+id/tv_signature"
+                    style="@style/style_text_ticket_left"
+                    android:text="签名:" />
+
+                <ImageView
+                    android:id="@+id/img_signature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_amount"
+                    android:layout_toRightOf="@id/tv_signature" />
+            </LinearLayout>
+        </LinearLayout>
     </RelativeLayout>
+
 
     <LinearLayout
         android:id="@+id/layoutBtns"
@@ -223,8 +212,9 @@
 
         <Button
             android:id="@+id/dialog_btn_print"
-            android:layout_marginLeft="@dimen/wosai_upay_margin_border"
             style="@style/style_button_common_green"
+            android:layout_marginLeft="@dimen/wosai_upay_margin_border"
             android:text="@string/wosai_upay_text_print" />
     </LinearLayout>
-</RelativeLayout><!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_dialog_ticket.xml -->
+</RelativeLayout>
+<!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_dialog_ticket.xml -->

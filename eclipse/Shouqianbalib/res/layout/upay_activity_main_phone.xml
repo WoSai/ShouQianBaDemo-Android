@@ -1,71 +1,81 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mainView"
-    style="@style/style_activity_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wosai_upay_bg_white"
+    android:orientation="vertical">
 
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
-    <RelativeLayout style="@style/style_activity_main">
+        <TextView
+            android:id="@+id/amountHeader"
+            style="@style/style_text_sub_title_gray"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/wosai_upay_main_title_margin_left"
+            android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
+            android:text="@string/wosai_upay_text_cashier" />
 
-        <RelativeLayout
-            android:id="@+id/top"
+        <EditText
+            android:id="@+id/etAmount"
+            style="@style/style_text_title"
+            android:background="@color/wosai_upay_transparent"
+            android:cursorVisible="false"
+            android:editable="false"
+            android:enabled="false"
+            android:inputType="numberDecimal"
+            android:text="0.01"
+            android:textColor="@color/wosai_upay_text_color_red"
+            android:textSize="@dimen/wosai_upay_text_size_title_money" />
+
+        <ImageButton
+            android:id="@+id/btnFinish"
+            style="@style/style_img_btn_right"
+            android:background="@drawable/selector_img_button_delete" />
+
+        <TextView
+            android:id="@+id/tvNotice"
+            style="@style/style_text_sub_title_gray"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wosai_upay_cash_header_height"
+            android:layout_height="@dimen/wosai_upay_main_notice_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/wosai_upay_bg_main_notice"
+            android:ellipsize="marquee"
             android:focusable="true"
-            android:focusableInTouchMode="true">
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="浦发银行交易暂停，时间待定！浦发银行交易暂停，时间待定！浦发银行交易暂停，时间待定！浦发银行交易暂停，时间待定！"
+            android:textColor="@color/wosai_upay_text_color_deep_orange"
+            android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/amountHeader"
-                style="@style/style_text_sub_title_gray"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="@dimen/wosai_upay_main_title_margin_left"
-                android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
-                android:text="@string/wosai_upay_text_cashier" />
+    </RelativeLayout>
 
-            <EditText
-                android:id="@+id/etAmount"
-                style="@style/style_text_title"
-                android:background="@color/wosai_upay_transparent"
-                android:cursorVisible="false"
-                android:editable="false"
-                android:enabled="false"
-                android:inputType="numberDecimal"
-                android:text="0.01"
-                android:textColor="@color/wosai_upay_text_color_red"
-                android:textSize="@dimen/wosai_upay_text_size_title_money" />
-
-            <ImageButton
-                android:id="@+id/btnFinish"
-                style="@style/style_img_btn_right"
-                android:background="@drawable/selector_img_button_delete" />
-
-            <TextView
-                android:id="@+id/tvNotice"
-                style="@style/style_text_sub_title_gray"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/wosai_upay_main_notice_height"
-                android:visibility="gone"
-                android:layout_alignParentBottom="true"
-                android:background="@color/wosai_upay_bg_main_notice"
-                android:ellipsize="marquee"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:gravity="center"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:scrollHorizontally="true"
-                android:singleLine="true"
-                android:text="浦发银行交易暂停，时间待定！浦发银行交易暂停，时间待定！浦发银行交易暂停，时间待定！浦发银行交易暂停，时间待定！"
-                android:textColor="@color/wosai_upay_text_color_deep_orange" />
-
-        </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/text_choose"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
             style="@style/style_text_sub_title_desc"
             android:layout_below="@+id/top"
             android:text="@string/wosai_upay_text_choose_pay_method" />
 
-
         <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
             android:id="@+id/checkoutMpos"
             style="@style/style_rl_btn_main_item"
             android:layout_below="@+id/text_choose">
@@ -88,9 +98,10 @@
             <ImageView style="@style/style_img_divider" />
         </RelativeLayout>
 
-
         <RelativeLayout
             android:id="@+id/checkoutMobile"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
             style="@style/style_rl_btn_main_item"
             android:layout_below="@+id/checkoutMpos">
 
@@ -114,6 +125,8 @@
 
         <RelativeLayout
             android:id="@+id/checkoutWeChat"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
             style="@style/style_rl_btn_main_item"
             android:layout_below="@+id/checkoutMobile">
 
@@ -136,7 +149,8 @@
         <RelativeLayout
             style="@style/style_base_horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:layout_alignParentBottom="true"
             android:layout_below="@+id/checkoutWeChat"
             android:background="@drawable/wosai_bg_bottom"
@@ -176,6 +190,6 @@
                 android:text="@string/wosai_upay_text_checking"
                 android:textColor="@color/wosai_upay_text_color_gray" />
         </LinearLayout>
-    </RelativeLayout>
-</RelativeLayout>
-<!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_activity_main.xml -->
+    </LinearLayout>
+</LinearLayout>
+<!-- From: file:/E:/GitHub/upay/app/src/main/res/layout/upay_activity_main_phone.xml -->
